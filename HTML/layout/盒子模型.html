@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+            .box1{
+                /*
+                使用width来设置盒子内容区的宽度
+                height来设置盒子内容区的高度
+                */
+                width: 100px;
+                height: 100px;
+                /*元素的背景会延伸到内边距*/
+                background-color: brown;
+                /*
+                为元素设置边框
+                要为一个元素设置边框必须指定三个样式
+                    border-width：边框宽度
+                    border-color: 边框颜色
+                    border-style: 边框样式
+                */  
+
+                /*border:solid 5px blue;*/
+
+                /*
+                border-width 可以分别指定四个边框的宽度
+                如果在border-width中
+                指定了四个值
+                则四个值分别会设置给上 右 下 左，按照顺时针的方向设置
+                如果指定三个值
+                则三个值会分别设置给上 左右 下
+                如果两个值
+                则两个只会分别设置给 上下 左右
+                */
+                border-width: 10px ;
+
+                /*
+                和宽度一样，color也提供了四个方向的样式，可以分别指定颜色
+                */
+                border-color: blue red yellow green;
+                 /*
+                和宽度一样，style也提供了四个方向的样式，可以分别指定颜色
+                */
+                border-style: solid;
+
+                /*
+                大部分浏览器中边框的宽度和颜色都是有默认值，而边框的样式默认值都是none                
+                */
+
+
+                /*border-left: 20px blue solid;*/
+
+                /*
+                内边距指的是内容区与盒子边框之间的距离
+                一共有四个方向的内边距，可以通过
+                    padding-top
+                    padding-right
+                    padding-left
+                    padding-botto
+                    来设置四个方向的内边距
+
+                    内边距会影响盒子的可见框大小
+                    盒子的大小由内容区、内边距和边框共同决定
+                    宽度=border_left_width+padding_left_width+width+padding_right_width+border_right_width
+                */
+              padding-top: 200px;
+                padding-right: 100px;
+                padding-bottom: 100px;
+                padding-left: 100px;                               
+            }
+        
+            /*创建一个子元素box2占满box1内容区*/
+            .box2{
+                width:100px;
+                height: 100px;
+                background-color: yellow;
+                /*使用padding可同时设置四个边框的样式，规则和border-width一致*/                
+                padding: 100px;
+                /*
+                外边距指的是盒子与其他盒子之间的距离，不会影响可见框的大小
+                而会影响到盒子的位置，盒子有4个方向的外边距
+                margin-top
+                margin-right
+                margin-left
+                margin-bottom  
+                由于页面中的元素都是靠左靠上摆放的，所以注意当我们设置上和左的外边距时会导致盒子自身的位置发生改变
+                而下和右外边距会改变其他盒子的位置
+                外边距也可以指定一个负值，若为负值则元素会向反方向移动
+                margin还可以设置为auto，auto一般值设置给水平方向的值
+                如果只指定左或右其中一个值设置为auto，则会将外边距设置为最大值
+                若left和right同时设置为auto，则会将两侧的外边距设置为相同的值，
+                就可以使元素在父元素中水平居中
+                垂直方向外边距设置为auto，则外边距默认值是0
+                外边距同样可以使用简写属性, 规则和padding一样
+                */
+                margin-top: 50px;
+               /* margin-left: 50px;
+                margin-right: 50px;*/
+                margin-bottom: 50px; 
+                margin-left: auto;
+                margin-right: auto;   
+                /*margin:10px 20px 30px 40px*/                        
+            }
+    </style>
+</head>
+<body>
+    <div class="box1">              
+    </div>
+    <div class="box2">
+    </div> 
+    
+</body>
+</html>

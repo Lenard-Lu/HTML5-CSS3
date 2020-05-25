@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        a{
+            background-color: chartreuse;
+            /*通过display样式可以修改元素的类型
+            可选值
+                inline：可以将一个元素作为内联元素显示
+                block： 可以将一个元素作为块元素显示
+                inline-block:display: 将一个元素转换为行内块元素
+                                        可以使一个元素既有行内元素的特点又有块元素的特点
+                                        既可以设置宽高又不会独占一行
+                none：  不显示元素而且元素不会在页面中继续占有位置*/ 
+            /*为其设置一个宽和高*/
+            display: block;
+            width: 500px;
+            height: 50px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: orange; 
+            /*使用display none 隐藏的元素不会在页面中显示，并且不会再占据页面的位置
+            */
+           /* display: none; */
+            /*visibility可以设置元素的可见与隐藏
+            可选值
+                visible 默认值， 元素默认会在页面显示
+                hidden   元素会隐藏不显示，但是位置依然保留*/
+            visibility: hidden;      
+            }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <a href="#">我是一个超链接</a>
+    
+</body>
+</html>

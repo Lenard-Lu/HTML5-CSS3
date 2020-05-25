@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: palegreen;
+            background-image:url("image/heart.jpg");
+            background-size: 100% 100%;
+            
+            /*如果背景图片大于div大小，默认显示左上角
+            如果背景图片和元素一样打，则会显示图片全部
+            如果背景图片比元素小，则会默认将背景图片平铺，以充满元素
+            可以同时为一个元素指定背景颜色和背景图片，这样背景颜色将会作为背景图片的底色
+            一般情况下设置背景图片都会同时指定一个背景颜色*/
+            /*
+            background-repeat
+            可选值
+                repeat 默认值，双方向平铺
+                no-repeat   不重复,图片有多大就显示多大
+                repeat-x    背景图片沿水平方向重复
+                repeat-y    背景图片沿垂直方向重复                
+            */
+            background-repeat: no-repeat;
+        }
+        .box2{
+            width: 500px;
+            height: 500px;
+            background-color: palegreen;
+            margin: 0 auto;
+            background-image: url("image/cat.jpg");
+            background-repeat: no-repeat;
+            /*
+            背景图片默认贴着元素的左上角显示
+             background-position
+             可选值 
+                    top right left bottom center 中的垂直和水平方向两个值
+                    来指定背景图片的位置
+                    如果只给出一个值，则第二个值默认为center
+            */
+            /* background-position:left right;  */
+            /*也可以直接指定两个偏移量--水平，垂直
+            若为正值则向右向下移动
+            如果指定负值则相左相上移动
+            */
+            background-position:150px 150px; 
+        }
+        body{
+            height: 5000px;
+            /* background-color: tomato;
+            background-image: url("image/cat.jpg");
+            background-repeat: no-repeat;
+            /*
+            background-attachment
+            当背景图片设置为fixed的时候，背景图片定位永远相对于浏览器的窗口
+            这种效果可以用来设置博客
+            不随窗口滚动的图片一般之设置给body，不给其他元素设置
+            用来设置背景图片是否随页面一起滚动
+            可选值
+                scroll 默认值， 背景图片随窗口滚动
+                fixed  背景图片会固定在某一位置不随窗口滚动
+            */
+            /* background-attachment:fixed;
+            background-position:center center;  */ 
+            /*backgroud 简写属性*/
+            background: tomato url("image/cat.jpg") no-repeat fixed center center;           
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div> -->
+    <!-- <div class="box2"></div> -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: blue;
+            overflow: hidden;
+        }
+        .box1 div{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 100px;
+        }
+        .box2{
+            /* transition 可以指定一个属性发生变化时的切换方式
+                
+                transition-property:height, width;
+                指定要执行过渡的属性，多个属性间使用逗号隔开，
+                如果所有属性都需要过度，则使用all
+                大部分属性都支持过渡，只要是能计算的值都支持
+                注意过渡时必须是从一个有效值向另一个有效值过渡
+                
+                transition-duration:100ms, 2s;
+                指定过渡效果的持续时间
+                时间单位 s 和 ms 
+                
+                transition-timing-function：ease
+                过渡的时序函数
+                指定过渡的执行方式
+                可选值
+                    ease 默认值， 慢速开始，先加速，最后减速停止
+                    linear 匀速执行
+                    ease-in 慢速开始 一直加速
+                    ease-out 快速开始 减速停止
+                    ease-in-out 慢速开始，再加速，减速停止，速度较快
+                    cubic-bezier（）来指定时序函数
+                    step（）分步执行过渡效果可选值，start-计时开始前执行
+                                                end-计时结束后执行
+                transition-delay：
+                过渡效果的延迟*/
+
+                /*
+                简写属性，transition可以设置所有过渡属性
+                如果要写延迟的话，则两个时间中第一个是持续时间 
+                 */
+            transition: all 2s;
+            background-color: crimson;
+        }
+        .box1:hover .box2{
+            width: 100px;
+            height: 100px;
+        }
+        .box3{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>    
+</body>
+</html>

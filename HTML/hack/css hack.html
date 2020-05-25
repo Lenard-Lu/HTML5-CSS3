@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 有一些情况，有一些特殊的代码只需要在某些特殊历览器中执行
+    不需要在其他浏览器中执行，这时就可以使用css hack -->
+    <!-- 条件hack，条件hack只对IE浏览器有效没其他浏览器都会将它识别为注释 
+    IE 10 及以上的浏览器已经不支持这种方式-->
+
+    <!-- 以下内容只会出现在IE 6中显示 -->
+    <!-- [if IE 6] -->
+    <p>我是一个p标签</p>
+    <!-- [endif] -->   
+    
+    <!-- 以下内容只会出现在IE 9及以下的浏览器中显示-->
+    <!-- [if lte IE 9] -->
+    <p>IE8标签</p>
+    <!-- [endif] -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+       .ta{
+            border: 1px solid; 
+             
+            width: 200px;                                 
+            margin: 0 auto;
+            border-spacing: 0px;
+            /*使用了border-collapse后border-spacing自动失效*/
+            border-collapse: collapse;           
+        }         
+        tr:nth-child(even){
+            background-color: springgreen;  
+        }
+        tr:hover{
+            background-color: tomato;
+        }
+        td,th{
+            border: 1px red solid; 
+            width: 40px; 
+            text-align: center;                        
+        }
+    </style>
+</head>
+<body>
+     <!-- 在HTML 中使用table在创建表格 -->
+     <table class="ta">
+         <tr>
+             <th>A1</th>
+             <th>A2</th>
+             <th>A3</th>
+             <th>A4</th>
+         </tr>
+         <tr>
+            <td>B1</td>
+            <td>B2</td>
+            <td>B3</td>
+            <td rowspan="2">B4</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <td>C3</td>            
+        </tr>
+        <tr >
+            <td>D1</td>
+            <td>D2</td>
+            <td colspan="2">D3 D4</td>            
+        </tr>
+     </table>
+     <!-- 长表格 -->
+     <table class="long">
+        <!-- thead中的内容永远都会在头部显示 -->
+        <thead>
+            <tr>
+                <th>A1</th>
+                <th>A2</th>
+                <th>A3</th>
+                <th>A4</th>
+            </tr>          
+        </thead>
+        <!-- tfoot中的内容永远都会在底部显示 -->
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>C2</td>
+                <td>C3</td>
+            </tr>           
+        </tfoot>
+        <!-- 
+            如果表格中没有写tbody，浏览器会自动添加tbody
+            并且将所有的tr放到tbody中，所以tr并不是table的子元素
+            而是tbody的子元素，所以通过table>tr无法选中行
+         -->
+        <tbody>
+            <tr>
+                <td>C1</td>
+                <td>C2</td>
+                <td>C3</td> 
+                <td>C4</td>
+            </tr>           
+        </tbody>     
+     </table>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        /*
+        伪类专门用来表示元素的一种特殊状态
+            比如：访问过的超链接，普通的超链接，获取焦点的文本框
+            当我们需要为处在这些特殊状态的元素设置样式时，就可以使用伪类
+        */
+        /*
+        为访问过的链接设置一个颜色为绿色
+        :visited  表示访问过的链接
+        浏览器是通过历史记录来判断一个链接是否访问过
+        由于涉及到了用户的隐私问题，所以使用visited时只能设置字体颜色
+        */
+        a:visited{
+            color:green;
+        }
+        /*
+        为没访问过的链接设置一个颜色为红色
+        :link  表示普通的连接（没访问过的链接）
+        */
+        a:link{
+            color:red;
+        }
+        /*
+        :hover伪类表示鼠标移入的状态
+        */   
+        a:hover{
+            color: hotpink;
+        } 
+       /* p:hover{
+            background-color:fuchsia;
+        }*/
+        /*
+        :active 伪类表示超链接被点击的状态
+        */
+        a:active{
+            color: black;
+        }
+        p:active{
+            color: orange;
+        }
+        /*
+        文本框获取焦点后文本框背景颜色设置为红色
+        */
+        input:focus{
+            background-color: red;
+        }
+        /*
+        ::selection 为p标签选中的文字设置样式
+        在火狐中采用第二种方式编写::-moz-selection
+        */
+        p::selection{
+            color:teal;
+        }
+        p::-moz-selection{
+            color:teal;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="http://www.google.com">我是一个超链接</a><br/>
+    <a href="http://www.google123.com">我是一个超链接</a>
+    <p>我是一个段落</p>
+    <!--文本框-->
+    <input type="text">
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用选择器</title>
+    <style>
+        /*为页面中的所有的p元素，设置一个字体颜色为红色*/
+        /*
+        元素选择器
+            作用:通过元素选择器可以选择页面中所有的指定元素
+            语法：标签名{}
+        */
+         p{
+            color:red;
+        }
+        h1{
+            color:green;
+        } 
+        /*
+        id选择器
+            作用：通过元素的id属性值选中唯一的一个元素
+            语法：#id属性值{}
+        */
+        #p1{
+            color:black;
+        }
+        /*
+        类选择器
+            作用：通过元素的class属性值选中一组元素
+            语法：.class属性值{}
+        */
+        .p2{
+            color: blue;
+        }
+        .p3{
+            color:brown;
+        }
+        /*为id为p1, class 为p2和h1，同时设置一个背景颜色为黄色*/
+        /*
+        选择器分组
+            作用：通过选择器分组可以同时选中多个选择器对应的元素
+            语法：选择器1，选择器2，选择器N{}
+        */
+        #p1,.p2,h1{
+            background-color:cyan;
+        }
+        /*
+        通配选择器
+            作用：可以选择页面中所有元素
+            语法：*{}
+        */
+        *{
+            font-family:'Times New Roman', Times, serif;
+        }
+        /*为拥有class为p3 的span元素的背景颜色设置为黄色*/
+        /*
+        复合选择器（交集选择器）
+            作用：可以选中同时满足多个选择器的元素
+            语法：选择器1选择器2选择器N{}
+        */
+        span.p3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>悯农</h1>
+    <p>锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <p id="p1">锄禾日当午</p>
+    <p>锄禾日当午</p>
+    <!--可以为一个元素设置多个class属性值，属性值之间用空格隔开-->
+    <p class="p2 p3">锄禾日当午</p>
+    <p class="p2">锄禾日当午</p>
+    <p class="p2">锄禾日当午</p>
+    <p class="p3">锄禾日当午</p>
+    <span class="p3">锄禾日当午</span>
+</body>
+</html>

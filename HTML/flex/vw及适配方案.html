@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            /* 网页中字体大小最小是12px,不能设置一个比12px 像素还小的字体
+            所以不能设置0.133333333333vw
+            0.1333333333333333vw=1px
+            1.333333333333333vw=10px
+            5.333333333333333vw=40px
+            13.33333333333333vw=100px*/
+            font-size:  13.33333333333333vw;
+        }
+        .box1{
+            /* rem
+                1rem =1html 中的字体大小 */
+            width: 0.48rem;
+            height: 0.35rem;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <!--由于不同设备的视口和像素比不同，所以同样的375个像素在不同的设备下意义是不一样的
+    所以在移动端开发时，就不能使用像素进行布局
+    而是用 vw作为单位 进行布局
+    100vw 一个视口的宽度
+    1vw 表示1%视口的宽度  
+    vw 这个单位永远相对于视口单位进行计算
+    设计图的宽度
+    750px 1125px
+    
+    创建一个48*35 大小的元素
+
+    100vw=750px(设计图中)
+    6.4vw=48px
+    -->
+
+    <div class="box1"></div>
+</body>
+</html>

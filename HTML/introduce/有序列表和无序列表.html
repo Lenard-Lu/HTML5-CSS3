@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表</title>
+    <style>
+        /*去掉项目符号*/
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        三种列表：无序，有序，定义列表
+    -->
+    <!--
+        无序列表-ul
+        列表项-li
+        通过type属性可以修改无序列表的项目符号
+            disc       -实心圆点
+            square     -实心方块
+            circle     -空心圆圈
+        默认的项目符号一般都不使用
+        如果需要设置项目符号，则可以采用为li设置背景图片的方式设置
+        ul和li都是块元素
+    -->
+    <ul>
+        <li>列表</li>
+        <li>列表</li>
+        <li>列表</li>
+        <li>列表</li>
+    </ul>
+    <!--
+        有序列表和无序列表类似-ol
+        使用有序的序号作为项目符号
+        type属性可以指定序号的默认值
+            1 阿拉伯数字
+            a 小写字母
+            A 大写字母
+            i 小写罗马数字
+            I 大写罗马数字
+        ol也是块元素
+    -->
+    <ol>
+        <li>结构</li>
+        <li>表现</li>
+        <li>行为</li>
+    </ol>
+    <!--列表之间可以互相嵌套-->
+    <p>菜谱</p>
+    <ul>
+        <li>
+            鱼香肉丝
+            <ol>
+                <li>鱼</li>
+                <li>香</li>
+                <li>肉丝</li>
+            </ol>
+        </li>
+        <li>
+            宫保鸡丁
+            <ul>
+                <li>宫保</li>
+                <li>鸡丁</li>
+            </ul>
+        </li>
+        <li>青椒肉丝</li>        
+    </ul>
+    <!--
+        定义列表用来定义一些内容-dl
+        dl中有两个子标签：dt,dd
+        dt:被定义的内容
+        dd:对定义内容的描述
+        dl,ul,ol之间都可以互相嵌套
+    -->
+    <dl>
+        <dt>武松</dt>
+        <dd>景阳冈打虎</dd>
+        <dd>打死西门庆</dd>
+        <dt>武大</dt>
+        <dd>身材矮小</dd>        
+    </dl>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块和内联</title>    
+</head>
+<body>
+    <!--
+        块元素和内联元素
+        块元素就是会独占一行的元素，无论内容有多少，都会独占一整行
+        包括 div,p,h1-h6
+
+        内联元素指的是只占自身大小的元素，不会独占一整行
+        包括 a, img, iframe, span
+        span 标签专门用来选中文字，为文字设置样式
+
+        块元素主要做布局，内联元素主要用来选中文本设置样式
+
+        一般情况下只用块元素包含内联元素，而不会用内联元素包含块元素
+
+        a 元素可以包含任何元素，除了它本身
+        p元素不可以包含任何其他的块元素
+    -->
+    <a href="#"><div style="background-color: tomato;">我是一个div</div></a>
+    <div>我是一个div</div>
+    <p>我是一个p标签
+        <span>我是一个span</span>
+    </p>
+
+
+</body>
+</html>

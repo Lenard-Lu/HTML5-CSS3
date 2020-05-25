@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        audio 标签用来向页面中引入一个外部的音频文件 
+        音视频文件引入时，默认情况下不允许用户自己控制播放停止
+        属性
+            controls 是否允许用户控制播放
+            autoplay 音频文件是否自动播放
+                如果设置了autoplay则音乐在打开页面时会自动播放
+                但是目前来讲大部分浏览器不会自动对音乐进行播放
+            loop 音乐是否循环播放
+    -->
+    <audio src="/audio/audio.mp3" controls autoplay></audio>
+    <!-- 除了通过src来指定外部文件的路径以外，还可以通过source来指定文件 -->
+    <!-- 如果浏览器不支持播放器会提醒用户 -->
+    <audio controls>
+        对不起您的浏览器不支持播放音频，请升级浏览器。
+        <source src="/audio/audio.mp3">
+        <source src="/audio/audio.ogg">
+    </audio>
+    <!-- embed 可以使IE8播放音视频 但必须指定width，如果稳定必须指定type -->
+    <embed src="/audio/audio.mp3" type="audio/mp3" width="300px" height="200px">
+
+    <!-- 引入视频可以使用vedio来引入视频文件 -->
+    <video controls>
+        <source src="/audio/flower.mp4">
+        <!-- <source src="/音视频/flower.webm"> -->
+    </video>
+</body>
+</html>

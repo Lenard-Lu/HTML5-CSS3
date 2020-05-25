@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+        浏览器有margin和padding的默认样式，而这些默认样式一般是不需要的
+        需要在编写样式之前清除
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /*为上边的元素设置一个下外边距*/
+            /*margin-bottom: 100px;*/
+        }
+        /*垂直外边距的重叠
+            在网页中垂直方向的相邻外边距会发生外边距重叠
+                兄弟元素之间的相邻外边距会取最大值而不是求和
+            如果父子元素的垂直外边距相邻了，则子元素的外边距会设置给父元素            
+            */
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            /*为下边的元素设置一个上外边距*/
+            margin-top: 200px;            
+        }
+        .box3{            
+            width:200px;
+            height: 100px;
+            background-color: blue;
+            margin-top: 100px; 
+            /*解决方法一  为box3设置一个上边框或者加padding 然后从height中减去padding值*/                     
+            /* border-top: 1px red solid;
+            padding-top: 1px; */
+            /*解决方法二  为box 3 加一个padding-top值然后在height中减去padding值*/
+            /* padding-top: 100px;             */
+        }
+        /*解决方法三  使用空的table标签可以隔离父子元素的外边距，阻止外边距的重叠*/
+        .box3::before{
+            content: '';
+            display: table;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+            /*
+            为子元素设置一个上外边距，是子元素上移
+            */
+            /* margin-top: 100px; */
+        }
+    </style>
+</head>
+<body>    
+    <div class="box1"></div>    
+    <div class="box2"></div>   
+    <div class="box3">        
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

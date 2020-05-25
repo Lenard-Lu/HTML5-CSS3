@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <!-- 
+        使用form 标签创建一个表单
+        form 标签中必须指定一个action属性， 该属性指向的是一个服务器的地址
+        当我们提交表单时将会提交到action属性对应的地址
+     -->
+    <form action="target.html">
+        <!-- 文本框 如果希望表单项中的数据提交到服务器中，还必须给表单项指定一个name属性
+            用户填写的信息会附在url地址后以查询字符串的形式发送给服务器
+            url地址？查询字符串
+            格式    属性名=属性值&属性名=属性值&属性名=属性值
+            在文本框中也可以指定value值，该值将会作为文本框的默认属性值显示
+        -->     
+        <fieldset>
+            <legend>用户信息</legend>
+            <label for="um">用户名：</label><input type="text" id="um" name="username" value="输入用户名"/><br/> <br/>               
+        <!-- 提交按钮可以将表单中的信息提交给服务器
+        再提交按钮中可以通过value值来修改按钮上的文字 -->
+        <!-- 使用input创建一个密码框 -->
+      <label for="pa">密码:</label> <input type="password" id="pa" name="password"/>
+        </fieldset>   
+        
+        <!-- 单选按钮 单选按钮通过name属性进行分组，name属性相同是一组按钮
+             像这种需要用户选择，但是不需要用户填写内容的表单项 必须指定一个value属性，
+             这样被选中的表单项的value属性值将会提交给服务器
+             默认选中选项使用 checked=“checked”
+        -->
+        性别：<input type="radio" name="gender" value="m"/> 男  <input type="radio" name="gender" value="f" checked="checked"/> 女 <br/>
+        <!--  -->
+        爱好：<input type="checkbox" name="hobby" value="sc" > 足球  
+        <input type="checkbox" name="hobby" value="ba" checked="checked" > 篮球  
+        <input type="checkbox" name="hobby" value="bm"> 羽毛球  
+        <input type="checkbox" name="hobby" value="tb" > 乒乓球 <br/>  
+        <!-- 使用select创建下拉列表 
+            name属性指定给select
+            value指定给option
+            默认选中 使用selected=“selected”
+            当为下拉列表添加一个multiple=“multiple”，则下拉列表变为一个多选的下拉列表
+        -->
+        你喜欢的明星：
+        <select name="star" >
+            <!-- 可以在select中使用optgroup对选项进行分组
+                同一个optgroup中的选项是一组
+            -->
+            <optgroup label="女明星">  
+                <option value="fbb">范冰冰</option>
+            <option value="lxr" selected="selected">林心如</option>          
+            </optgroup>
+            <optgroup label="男明星">
+                <option value="zbs">赵本山</option>
+            </optgroup>                     
+        </select><br/>
+
+        <br><br>
+        <!-- 创建多行文本域 -->
+        自我介绍：<textarea name="info"  cols="30" rows="10"></textarea><br/>
+        <input type="submit" value="提交"/> <input type="reset"> 
+        <input type="button" value="按钮"><br/>
+        <button type="submit">提交</button>
+        <button type="menu">菜单</button>
+        <button type="reset">重置</button>
+        <button type="button">按钮</button>
+    </form>
+</body>
+</html>

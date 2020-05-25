@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子元素选择器</title>
+    <style>
+        /*为第一个p标签设置颜色
+        :first-child 可以选中第一个子元素
+        :last-child 可以选中最后一个子元素
+        :nth-child（）可以选中任意一个位置子元素
+        :first-of-type
+        :last-of-type
+        :nth-of-type
+            和first-child 这些类似， 在当前类型中寻找
+        */
+        p:first-child{
+            background-color: yellow;
+        }
+        body>p:first-child{
+            background-color: tomato;
+        }
+        p:last-child{
+            background-color: pink;
+        }
+        p:nth-child(even){
+            background-color: teal;
+        }
+        p:first-of-type{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <span>我是span</span>    
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+   <div>
+    <p>这是一个段落</p>
+   </div> 
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>           
+</body>
+</html>

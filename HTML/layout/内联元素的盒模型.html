@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            background-color: red;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .s1{
+            /*内容区、内边距、边框、外边距*/
+            /*内联元素不能设置width和height*/
+            width: 100px;
+            height: 100px;
+            /*设置水平内边距,内联元素可以设置水平方向内边距*/
+            padding-left: 100px;            
+            padding-right: 100px;
+            /*设置垂直方向内边距,内联元素可以设置水平方向内边距
+            但是不会影响布局*/
+            /*padding-top: 50px;
+            padding-bottom: 50px;*/
+            /*为元素设置边框,内联元素可以设置边框，但是垂直的边框不会影响布局*/
+            border: 1px blue solid;
+            /*水平外边距,内联元素支持水平方向外边距,并且不会重叠，而是求和*/
+            margin-left: 100px;
+            margin-right: 100px;
+            /*内联元素不支持垂直外边距*/
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+        .s2{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <span class="s1">我是一个sapn</span>
+    <span class="s2">我是一个sapn</span>
+    <span>我是一个sapn</span>
+    <span>我是一个sapn</span>
+    <div class="box1"></div>
+</body>
+</html>

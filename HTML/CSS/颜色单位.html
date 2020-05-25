@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色</title>
+    <style>
+        /*
+        颜色单位
+        *在CSS中可以直接使用颜色名表示不同的颜色
+        *也可以使用RGB值表示不同的颜色
+            rgb（红色的浓度，绿色的浓度，蓝色的浓度）
+            0-255之间的值
+        *浓度也可以采用百分数设置
+            0%-100%
+            使用百分数也会转换为0-255之间的数
+        *也可以使用十六进制的rgb值来表示颜色
+            语法:#红色绿色蓝色
+            使用三组两位的十六进制数组来表示颜色
+            00-ff
+            #ff0000 可以写成#f00
+            #aabbcc 可以写成#abc
+            #aabbcd 不可以简写
+        rgba-a表示透明度,1表示完全不透明，0表示完全透明
+
+        HSL值 HSLA值
+        H -色相，取值范围 (0-360)
+        S -饱和度,颜色的浓度(0%-100%)
+        L -亮度, 颜色的亮度(0%-100%)
+        */
+        .box1{
+            width: 100px;
+            height: 100px;
+            /*background-color: rgb(100%,0%, 0%);*/
+            /* background-color: #ffee00; */
+            /* background-color: rgba(255, 0, 0, 0.3); */
+            background-color: hsl(0, 100%, 80%);
+        }
+    </style>
+</head>
+<body>
+  <div class="box1"></div>  
+</body>
+</html>

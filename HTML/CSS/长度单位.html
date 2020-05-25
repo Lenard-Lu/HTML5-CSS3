@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单位</title>
+    <style>
+        /*
+        长度单位
+            px-像素 使用最多的单位， 一个像素相当于屏幕中的一个小点
+            %-百分比， 这样浏览器会根据父元素的样式计算该值
+                        当父元素的属性值发生变化，子元素也会按照比例发生改变
+                        在创建自适应页面时，经常使用百分比作为单位
+            em-相对于当前元素的字体大小来计算
+                1em=1font-size
+                当使用em时，当字体大小发生改变时，em也会随之改变
+                当设置字体相关的样式时，经常会使用em
+            
+            rem-相对于根元素的字体大小计算-即HTML字体大小
+        */
+        html{
+            font-size: 20px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box1{
+            font-size: 100px;
+            /* width: 10em; */
+            width: 10rem;
+            height: 50%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1"></div>
+    </div>
+</body>
+</html>

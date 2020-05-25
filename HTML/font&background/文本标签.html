@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本标签</title>
+</head>
+<body>
+    <!--
+        em 和 strong 都表示强调的内容
+        em 表示语气上的强调，为斜体
+        strong 表示强调的内容，比em更强烈，为粗体
+
+    -->
+    <p>
+        今天天气<em>真不错!</em>
+    </p>
+    <p>
+        <strong>
+            如果不认真。
+        </strong>
+    </p>
+    <!--
+        i -斜体， 无语气 
+        b -粗体， 无语气
+        h5 规范中规定， 对于不需要着重的内容， 就可以使用这两个标签
+    -->
+    <p>
+        <i>我是i标签的内容</i>
+    </p>
+    <p>
+        <b>我是b的内容</b>
+    </p>
+    <!--
+        small标签中的内容，会比父元素中的文字要小一些
+        在h5中使用small表示细则一类的内容
+        比如：合同中的小字，网站的版权声明
+    -->
+    <p>
+        我是p标签中的内容<small>我是small中的内容</small>
+    </p>
+    <!--
+        网页中所有的加书名号的内容都可以使用cite 标签
+        表示参考的内容
+    -->
+    <p>        
+        <cite>《论语》</cite>是我最喜欢的书。
+    </p>
+    <!--
+        q表示短的引用（行内引用），引用的内容，浏览器会默认加上引号
+        blockquote标签表示一个长引用（块级引用）
+    -->
+    <p>
+        子曰：<q>学而时习之不亦说乎！</q>
+    </p>
+    <div>
+        子曰：<blockquote>有朋自远方来不亦乐乎</blockquote>
+    </div>
+    <!--
+        sup 标签 设置上标
+        sub 标签 设置下标
+    -->
+    <p>
+        2<sup>2</sup>
+        赵薇<sup><a href="#">[1]</a></sup>
+        H<sub>2</sub>O
+    </p>
+    <!--
+        del 表示删除的内容,标签中的内容会自动添加删除线
+        ins 表示插入的内容，标签中的内容会自动添加下划线
+    -->
+    <p>
+       <del>17.75</del>  <br>
+        15.54
+        今天的天气<ins>真好</ins>
+    </p>
+    <!--
+        需要在页面中直接编写代码使用pre
+        pre 是一个预格式标签，不会忽略多个空格
+
+        code专门用来表示代码，是一个语义化标签
+        两者结合使用
+    -->
+    <pre>
+        <code>
+window.onload=function(){
+    alert("Hello, World!")
+}
+        </code>
+    </pre>
+    
+</body>
+</html>
